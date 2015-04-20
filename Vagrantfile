@@ -1,7 +1,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "vmware/photon"
 
-  config.vm."vmware_desktop" do |v|
+  config.vm.provider "vmware_desktop" do |v|
     v.vmx["memsize"] = "2048"
     v.vmx["numvcpus"] = "2"
     v.vmx["cpuid.coresPerSocket"] = "1"
